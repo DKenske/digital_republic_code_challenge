@@ -25,7 +25,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ## Start project
 
-when project is downloaded, run *yarn install* to install all dependencies and then *yarn start* to start the project!
+when project is downloaded, run **yarn install** to install all dependencies and then **yarn start** to start the project!
 
 
 
