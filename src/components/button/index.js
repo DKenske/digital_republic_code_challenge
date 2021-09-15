@@ -1,31 +1,31 @@
 import React from 'react';
-import { Button } from './styles';
+import { ButtonComponent } from './styles';
 
-const ButtonComponent = ({
+const Button = ({
   label,
-  type,
-  onClick,
-  variant,
   width,
+  height,
   margin,
-  disabled,
-  fullWidthMobile,
-  style,
+  strong,
+  fontSize,
+  background,
+  underline,
+  onClick,
 }) => {
   return (
-    <Button
-      type={type}
-      onClick={onClick}
-      variant={variant}
+    <ButtonComponent
       width={width}
       margin={margin}
-      disabled={disabled}
-      fullWidthMobile={fullWidthMobile}
-      style={style}
+      height={height}
+      strong={strong}
+      fontSize={fontSize}
+      background={background}
+      underline={underline}
+      onClick={onClick}
     >
       {label}
-    </Button>
+    </ButtonComponent>
   );
 };
 
-export default ButtonComponent;
+export default Button;

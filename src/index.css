@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100;0,200;0,400;0,600;0,700;0,800;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+Tokumin:wght@800&display=swap');
 
 * {
   box-sizing: border-box;
@@ -9,14 +10,25 @@
 
 body {
   margin: 0;
+  height: 100vh;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #f1f5f9;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+  /* background: #e0b2e4; */
+}
+
+.home-title,
+.form-title {
+  font-family: 'Kaisei Tokumin', serif !important;
+}
+
+.home-button {
+  font-family: 'Kaisei Tokumin', serif !important;
 }
 
 .bm-burger-button {

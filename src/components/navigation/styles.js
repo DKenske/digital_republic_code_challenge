@@ -11,6 +11,6 @@ export const MenuItem = styled.a`
   padding: 0.8em;
   font-size: 1.15em;
   text-align: center;
-  color: #aaa;
-  text-decoration: underline;
+  color: #ccc;
+  text-decoration: none;
 `;

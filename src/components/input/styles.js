@@ -1,3 +1,4 @@
+import { TextField } from '@material-ui/core';
 import styled from 'styled-components';
 import { device } from '../../devices';
 
@@ -8,34 +9,12 @@ export const Label = styled.label`
   justify-content: center;
 `;
 
-export const Input = styled.input`
-  width: 100%;
-  background-color: #fff;
-  min-height: 48px;
-  border-radius: 6px;
-  padding: 0 16px;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  border: 1px solid #cfd8e3;
-  position: relative;
-  transition: all 0.5s ease-out;
-  ${({ marginBottom }) =>
-    marginBottom &&
-    `
-  margin-bottom: ${marginBottom}px;
-  @media ${device.mobileL} {
-    margin-bottom: ${marginBottom + 10}px;
-  }
-  `}
-  ${({ isInvalid }) => isInvalid && 'border-color: red;'}
-  ${({ disabled }) =>
-    disabled &&
-    `
-    background-color: #dddddd;
-    cursor:default;
-    border: none;
-  `};
+export const Input = styled(TextField)`
+  width: ${({ width }) => width || '100%'};
 
-  ::placeholder {
-    color: ${({ editing }) => editing && 'black;'};
+  input {
+    height: ${({ height }) => height};
+
+    text-align: ${({ textAlign }) => textAlign || 'center'};
   }
 `;

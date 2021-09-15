@@ -1,13 +1,15 @@
 import React from 'react';
-import { Switch, Route, Redirect } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import Home from '../pages/home';
 import Navigation from '../components/navigation/index';
+import { Calculator } from '../pages/calculator';
 
 const Routes = () => {
   return (
     <Switch>
       <Navigation>
-        <Route path="/" component={Home} />
+        <Route exact path="/" component={Home} />
+        <Route exact path="/calculator" component={Calculator} />
       </Navigation>
     </Switch>
   );
