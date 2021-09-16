@@ -17,7 +17,8 @@ export const FormWallsMeasures = () => {
     e.preventDefault();
     handleWallArea({
       ...item,
-      [measure]: parseInt(e.target.value),
+      [measure]:
+        measure === 'wall_name' ? e.target.value : parseInt(e.target.value),
     });
   };
   return (
@@ -38,7 +39,10 @@ export const FormWallsMeasures = () => {
           justify="center"
           alignContent="flex-start"
         >
-          <Input defaultValue={item.wall_name} />
+          <Input
+            defaultValue={item.wall_name}
+            onChange={(e) => handleOnChange('wall_name', item, e)}
+          />
           <Grid container direction="row" spacing={2} justify="center">
             <Grid item xs={12} md={5} lg={5}>
               <Input

@@ -24,3 +24,75 @@ export const CalculatorPagesTitles = [
     label: 'Here is the result of your quotation!',
   },
 ];
+
+export const PageSteps = [
+  { page_id: 1, label: 'Ambient Type' },
+  { page_id: 2, label: 'Ink Type' },
+  { page_id: 3, label: 'Walls Quantity' },
+  { page_id: 4, label: 'Coats Quantity' },
+  { page_id: 5, label: 'Measures' },
+  { page_id: 6, label: 'Result' },
+];
+
+export const InkOptions = [
+  { label: '0.5L', value: 0.5 },
+  { label: '2.5L', value: 2.5 },
+  { label: '3.6L', value: 3.6 },
+  { label: '18L', value: 18 },
+];
+
+export const InkPrices = [
+  {
+    ink_wheight: 0.5,
+    price: {
+      1: {
+        1: 6.5,
+        2: 6.0,
+      },
+      2: {
+        1: 5.5,
+        2: 5.0,
+      },
+    },
+  },
+  {
+    ink_wheight: 2.5,
+    price: {
+      1: {
+        1: 26.5,
+        2: 26.0,
+      },
+      2: {
+        1: 25.5,
+        2: 25.0,
+      },
+    },
+  },
+
+  {
+    ink_wheight: 3.6,
+    price: {
+      1: {
+        1: 37.5,
+        2: 37.0,
+      },
+      2: {
+        1: 36.5,
+        2: 36.0,
+      },
+    },
+  },
+  {
+    ink_wheight: 18,
+    price: {
+      1: {
+        1: 181.5,
+        2: 181.0,
+      },
+      2: {
+        1: 180.5,
+        2: 180.0,
+      },
+    },
+  },
+];

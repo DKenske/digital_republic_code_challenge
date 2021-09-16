@@ -3,7 +3,7 @@ import {
   IoIosAddCircleOutline,
   IoIosRemoveCircleOutline,
 } from 'react-icons/io';
-import { Grid } from '@material-ui/core';
+import { Grid, Stepper } from '@material-ui/core';
 
 export const FormTitle = styled.h1`
   margin-bottom: 5vh;
@@ -65,7 +65,7 @@ export const CardBody = styled(Grid)`
 `;
 
 export const CardResult = styled(Grid)`
-  background-color: white;
+  background-color: #e0b9e9;
   border-radius: 5px;
   box-shadow: 1px 1px 10px #999;
   && {
@@ -74,6 +74,12 @@ export const CardResult = styled(Grid)`
     min-width: 30vw;
     max-width: 30vw;
     max-height: 50vh;
-    padding: 0 15px 0 15px;
+    padding: 15px;
+  }
+`;
+
+export const PageStepper = styled(Stepper)`
+  && {
+    background-color: #e0b2e4;
   }
 `;

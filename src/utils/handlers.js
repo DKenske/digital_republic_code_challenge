@@ -4,7 +4,11 @@
 /* eslint-disable camelcase */
 import { useCalculatorForm } from '../store/modules/CalculatorForm/actions';
 import { store } from '../store/index';
-import { verifyAndReturnMeasures, verifyIfPageHasData } from './verifiers';
+import {
+  verifyAndReturnMeasures,
+  verifyIfPageHasData,
+  verifyInkCans,
+} from './verifiers';
 import {
   CLEAN_ERRORS,
   IS_INVALID_HEIGHT,
@@ -14,6 +18,7 @@ import {
   SET_WALL_MEASURES,
   WALLS_WINDOWS_DOORS_MEASURES_DONT_MATCH,
 } from './reducersTypes';
+import { InkPrices } from './options';
 
 export const handlePageChange = () => {
   const actualPage = store.getState().CalculatorData.page;
@@ -75,7 +80,40 @@ export const handleGetResult = () => {
   const totalAreaOfWalls = arrOfAreas.reduce(add, 0) / 10000;
   const litersOfInk = totalAreaOfWalls / 5;
 
-  return totalAreaOfWalls;
+  const { ink_cans } = verifyInkCans(litersOfInk);
+
+  return { totalAreaOfWalls, litersOfInk, ink_cans };
+};
+
+export const handleGetPrices = (item, perCan) => {
+  const { ambient_type, ink_type, coats_qnt } = store.getState().CalculatorData;
+
+  const value = InkPrices.find(
+    ({ ink_wheight }) => ink_wheight === item.ink_can
+  ).price[ambient_type][ink_type];
+
+  if (perCan === null || perCan === undefined) {
+    return value * item.quantity * coats_qnt;
+  }
+  if (perCan) return value;
+  return value * item.quantity;
+};
+
+export const handleGetTotalPrice = (result) => {
+  const { ambient_type, ink_type, coats_qnt } = store.getState().CalculatorData;
+  const priceArr = [];
+
+  result.ink_cans.map((item) =>
+    priceArr.push(
+      InkPrices.find(({ ink_wheight }) => ink_wheight === item.ink_can).price[
+        ambient_type
+      ][ink_type] *
+        item.quantity *
+        coats_qnt
+    )
+  );
+
+  return priceArr.reduce(add, 0);
 };
 
 const add = (ac, a) => {
