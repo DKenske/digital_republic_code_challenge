@@ -13,7 +13,7 @@ export const FormWallsMeasures = () => {
   useMemo(() => console.log(wallList), [wallList]);
 
   const handleOnChange = (measure, item, e) => {
-    // console.log(wallList);
+    // (wallList);
     e.preventDefault();
     handleWallArea({
       ...item,

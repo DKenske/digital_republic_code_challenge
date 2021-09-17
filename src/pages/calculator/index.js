@@ -39,7 +39,7 @@ export const Calculator = () => {
             <Step
               key={page_id}
               onClick={() => {
-                calculatorData.page > page_id
+                calculatorData.page >= page_id
                   ? handleChangeStep(page_id)
                   : handleFailure();
               }}
@@ -58,12 +58,14 @@ export const Calculator = () => {
         <ErrorText>{calculatorData.error.msg}</ErrorText>
       )}
 
-      <ButtonComponent
-        label="Next!"
-        margin="20px"
-        width="17.5vw"
-        onClick={() => handlePageChange()}
-      />
+      {calculatorData.page !== 6 && (
+        <ButtonComponent
+          label="Next!"
+          margin="20px"
+          width="17.5vw"
+          onClick={() => handlePageChange()}
+        />
+      )}
     </Body>
   );
 };

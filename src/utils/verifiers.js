@@ -11,8 +11,6 @@ export const verifyIfPageHasData = () => {
   const { page, ambient_type, ink_type, coats_qnt, walls_qnt, error } =
     store.getState().CalculatorData;
 
-  console.log(!!error.msg);
-
   switch (page) {
     case 1:
       return !!ambient_type;
