@@ -1,6 +1,6 @@
 import { Grid } from '@material-ui/core';
 import React, { useMemo, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import Input from '../../components/input/index';
 import { useCalculatorForm } from '../../store/modules/CalculatorForm/actions';
 import { AddIcon, RemoveIcon } from './styles';

@@ -1,4 +1,3 @@
-import { formatRelative } from 'date-fns';
 import React from 'react';
 import { Label, Input } from './styles';
 
