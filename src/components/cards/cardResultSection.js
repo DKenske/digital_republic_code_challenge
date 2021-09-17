@@ -10,7 +10,7 @@ export const CardResultSection = ({ children, header }) => {
       lg={header ? 11 : 5}
       header={header}
       justify="center"
-      alignContent="center"
+      alignContent={header ? 'center' : 'flex-start'}
     >
       {!header ? children : <TotalAreaTitle>{children}</TotalAreaTitle>}
     </CardSection>

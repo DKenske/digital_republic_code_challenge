@@ -18,4 +18,14 @@ Other features implemented -
         Ink type selection (metalness or opaque): that interfers in the type of Ink used and how many it coasts based on ink finish.
 
         quantity of coats: interfer in how many it coasts considerating an coat of ink in 5m2 is 1L, so when ink cans are calculated, 
-        considerate pass mor coates to have different results
+        considerate pass mor coates to have different results.
+
+
+    so, if you interested in just test this app with base features, select ***Internal ambient*** in ambient type, ***opaque** in type selection, and just **1** coat
+
+
+
+I hope you enjoy it :)
+
+
+
