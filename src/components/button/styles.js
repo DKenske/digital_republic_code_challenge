@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { Button } from '@material-ui/core';
-import { device } from '../../devices';
 
 export const ButtonComponent = styled(Button)`
   width: ${({ width }) => width || '30vw'};
